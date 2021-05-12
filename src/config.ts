@@ -1,4 +1,4 @@
-import { object, string, boolean, InferType } from 'yup';
+import { object, string, InferType } from 'yup';
 import { DelegationContractType } from './helpers/types';
 
 export const minDust: string = '5000000000000000'; // 0.005 EGLD
@@ -27,16 +27,17 @@ export const stakingContract: string =
   'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqllls0lczs7';
 export const delegationManagerContract: string =
   'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqylllslmq6y6';
+export const walletConnectBridge: string = 'https://bridge.walletconnect.org';
 
 export const network: NetworkType = {
-  id: 'testnet',
-  name: 'Testnet',
-  egldLabel: 'xEGLD',
-  walletAddress: 'https://testnet-wallet.elrond.com/dapp/init',
-  apiAddress: 'https://testnet-api.elrond.com',
-  gatewayAddress: 'https://testnet-gateway.elrond.com',
-  explorerAddress: 'http://testnet-explorer.elrond.com/',
-  delegationContract: 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr0llllsj732py',
+  id: 'mainnet',
+  name: 'Mainnet',
+  egldLabel: 'EGLD',
+  walletAddress: 'https://wallet.elrond.com/dapp/init',
+  apiAddress: 'https://api.elrond.com',
+  gatewayAddress: 'https://gateway.elrond.com',
+  explorerAddress: 'https://explorer.elrond.com/',
+  delegationContract: 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv8lllls3ydk0k',
 };
 
 const networkSchema = object({
